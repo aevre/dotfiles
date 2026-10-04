@@ -1,6 +1,7 @@
 [environment]
 # XDG_CURRENT_DESKTOP = "umbriel"
 # XDG_SESSION_TYPE = "wayland"
+
 # 平台与输入法框架
 XMODIFIERS = "@im=fcitx"
 QT_IM_MODULES = "wayland;fcitx"
@@ -10,7 +11,7 @@ QT_IM_MODULES = "wayland;fcitx"
 # 38.0 removed
 ELECTRON_OZONE_PLATFORM_HINT = "wayland"
 
-# QT 界面与主题主题
+# Qt 界面与主题
 QT_QPA_PLATFORM = "wayland"
 QT_QPA_PLATFORMTHEME = "qt6ct"
 QT_WAYLAND_DISABLE_WINDOWECORATION = "1"
@@ -19,6 +20,7 @@ QT_WAYLAND_DISABLE_WINDOWECORATION = "1"
 XCURSOR_THEME = "phinger-cursors-light"
 XCURSOR_SIZE = "32"
 
+# NVIDIA
 # GBM_BACKEND = "nvidia-drm"
 # __GLX_VENDOR_LIBRARY_NAME = "nvidia"
 LIBVA_DRIVER_NAME = "nvidia"
