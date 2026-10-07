@@ -25,10 +25,11 @@ autostart = [
   "vicinae server",
   "wl-clip-persist --clipboard regular",
   "flclash",
-  "qqmusic"
+  "qqmusic",
 ]
 
-xwayland = true                # requires restart to change
-show_cheatsheet = false        # show keybinds overlay on startup
-focus_on_activate = true       # activation requests mark urgent without stealing focus
+xwayland = true                   # Start Xwayland lazily for X11 applications. Changes require a restart.
+xwayland_native_resolution = true # Show outputs to X11 applications at their physical resolution, so they render sharp on scaled outputs. Changes require a restart.
+show_cheatsheet = false           # show keybinds overlay on startup
+focus_on_activate = true          # activation requests mark urgent without stealing focus
 honor_restored_maximize = true
