@@ -16,6 +16,9 @@ text/plain=nvim.desktop
 image/png=swayimg.desktop
 image/jpeg=swayimg.desktop
 inode/directory=thunar.desktop
+x-scheme-handler/clash=flclash-url-handler.desktop
+x-scheme-handler/clashmeta=flclash-url-handler.desktop
+x-scheme-handler/flclash=flclash-url-handler.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
