@@ -24,6 +24,6 @@ saturation = 1.1 # 0.0-2.0
 
 [appearance.shadow]
 enabled = true
-softness = 30       # 0-200, 0 = hard edge
-offset_x = 2        # -200 to 200
+softness = 30  # 0-200, 0 = hard edge
+offset_x = 2   # -200 to 200
 offset_y = 2
