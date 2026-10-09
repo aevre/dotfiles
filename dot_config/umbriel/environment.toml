@@ -18,7 +18,7 @@ QT_WAYLAND_DISABLE_WINDOWECORATION = "1"
 
 # 鼠标光标主题与大小
 XCURSOR_THEME = "phinger-cursors-light"
-XCURSOR_SIZE = "32"
+XCURSOR_SIZE = "34"
 
 # NVIDIA
 # GBM_BACKEND = "nvidia-drm"
