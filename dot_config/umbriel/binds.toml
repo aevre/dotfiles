@@ -198,6 +198,21 @@
 "XF86MonBrightnessUp" = { action = "spawn:brightnessctl --class=backlight set +10%", allow_when_locked = true }
 "XF86MonBrightnessDown" = { action = "spawn:brightnessctl --class=backlight set 10%-", allow_when_locked = true }
 
+
+# ===== 屏幕共享 / Screencasting =====
+# 暂停屏幕共享并停止跟随
+"Mod+Alt+S" = "screencast-clear"
+# 跟随当前聚焦的输出
+"Mod+Alt+O" = "screencast-follow-output"
+# 停止跟随，保留当前共享目标
+"Mod+Alt+Escape" = "screencast-follow-stop"
+# 跟随当前聚焦的窗口
+"Mod+Alt+W" = "screencast-follow-window"
+# 共享当前聚焦的输出
+"Mod+Alt+Shift+O" = "screencast-set-output"
+# 共享当前聚焦的窗口
+"Mod+Alt+Shift+W" = "screencast-set-window"
+
 # ===== 会话 / 退出 =====
 "Mod+Ctrl+R" = "config-reload"
 "Mod+Shift+E" = "session-quit"
