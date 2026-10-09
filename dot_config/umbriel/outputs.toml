@@ -3,7 +3,20 @@ mode = "1920x1080@165"
 scale = 1.25
 vrr = "fullscreen"
 position = [0, 0]
-# hdr = 'on'
+enabled = true
+focus_at_startup = true
+transform = "normal"
+tearing = false
+direct_scanout = true
+bit_depth = 10
+hdr = "off"
+sdr_white = 203
+workspaces = "dynamic"
+min_workspaces = 1
+cyclic_workspaces = false
+workspace_axis = "vertical"
+
+# screen_effect = "off"
 
 [output.HDMI-A-1]
 mode = "2256x1504@60.000"
@@ -11,6 +24,18 @@ scale = 1.50
 vrr = "fullscreen"
 enabled = true
 transform = "180"
+focus_at_startup = false
+tearing = false
+direct_scanout = true
+bit_depth = 10
+hdr = "off"
+sdr_white = 203
+workspaces = "dynamic"
+min_workspaces = 1
+cyclic_workspaces = false
+workspace_axis = "vertical"
+
+# screen_effect = "off"
 
 [output.DP-1]
 mode = "2256x1504@60.000"
@@ -18,6 +43,18 @@ scale = 1.5
 vrr = "fullscreen"
 enabled = true
 transform = "180"
+focus_at_startup = false
+tearing = false
+direct_scanout = true
+bit_depth = 10
+hdr = "auto"
+sdr_white = 203
+workspaces = "dynamic"
+min_workspaces = 1
+cyclic_workspaces = false
+workspace_axis = "vertical"
+
+# screen_effect = "off"
 
 [output.DP-3]
 mode = "2256x1504@60.000"
@@ -25,3 +62,15 @@ scale = 1.5
 vrr = "fullscreen"
 enabled = true
 transform = "180"
+focus_at_startup = false
+tearing = false
+direct_scanout = true
+bit_depth = 10
+hdr = "off"
+sdr_white = 203
+workspaces = "dynamic"
+min_workspaces = 1
+cyclic_workspaces = false
+workspace_axis = "vertical"
+
+# screen_effect = "off"
