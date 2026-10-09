@@ -5,6 +5,7 @@
 # ============================================================
 [[window_rule]]
 blur = true
+blur_popups = true
 blur_optimized = false
 
 # [[window_rule]]
@@ -36,24 +37,41 @@ default_floating_size = { width = 0.8, height = 0.9 }
 # 模糊 / 透明 (Blur & opacity)
 # ============================================================
 [[window_rule]]
-match.app_id = "^(com\\.mitchellh\\.ghostty|neovide|obsidian|org\\.gnome\\.Nautilus)$"
+match.app_id = [
+  "^com\\.mitchellh\\.ghostty$",
+  "^neovide$",
+  "^obsidian$",
+  "^org\\.gnome\\.Nautilus$",
+]
 blur = true
 
 [[window_rule]]
-match.app_id = "^(obsidian|org\\.gnome\\.Nautilus)$"
+match.app_id = ["^obsidian$", "^org\\.gnome\\.Nautilus$"]
 opacity = 0.9
 
 [[window_rule]]
-match.app_id = "^(org\\.kde\\.kdenlive|mpv|kazumi|celluloid|virt-manager)$"
+match.app_id = [
+  "^org\\.kde\\.kdenlive$",
+  "^mpv$",
+  "^kazumi$",
+  "^celluloid$",
+  "^virt-manager$",
+]
 opacity = 1.0
 
 [[window_rule]]
-match.app_id = "^(steam_app_.*|gamescope|wine)$"
+match.app_id = ["^steam_app_.*$", "^gamescope$", "^wine$"]
 opacity = 1.0
 blur = false
 
 [[window_rule]]
-match.title = "[Gg]enshin [Ii]mpact|[Zz]enless [Zz]one [Zz]ero|[Vv]ictoria 3|[Mm]inecraft|[Ee]ndfield"
+match.title = [
+  "^[Gg]enshin [Ii]mpact$",
+  "^[Zz]enless [Zz]one [Zz]ero$",
+  "^Victoria 3$",
+  "^Minecraft$",
+  "^Endfield$",
+]
 opacity = 1.0
 blur = false
 
@@ -61,13 +79,24 @@ blur = false
 # 浮动工具 / 对话框 (Floating utilities & dialogs)
 # ============================================================
 [[window_rule]]
-match.app_id = "^(gnome-control-center|pavucontrol|nm-connection-editor)$"
+match.app_id = [
+  "^gnome-control-center$",
+  "^pavucontrol$",
+  "^nm-connection-editor$",
+]
 default_floating_size = { width = 0.8, height = 0.9 }
 default_floating = true
 blur_optimized = false
 
 [[window_rule]]
-match.app_id = "^(org\\.gnome\\.Calculator|gnome-calculator|galculator|blueman-manager|xdg-desktop-portal|xdg-desktop-portal-gtk)$"
+match.app_id = [
+  "^org\\.gnome\\.Calculator$",
+  "^gnome-calculator$",
+  "^galculator$",
+  "^blueman-manager$",
+  "^xdg-desktop-portal$",
+  "^xdg-desktop-portal-gtk$",
+]
 default_floating = true
 blur_optimized = false
 default_floating_size = { width = 0.8, height = 0.9 }
@@ -79,13 +108,26 @@ blur_optimized = false
 default_floating_size = { width = 0.8, height = 0.9 }
 
 [[window_rule]]
-match.app_id = "nwg-look"
-match.title = "nwg-look"
+match.app_id = "^nwg-look$"
+match.title = "^nwg-look$"
 default_floating = true
 default_floating_size = { width = 0.8, height = 0.9 }
 
 [[window_rule]]
-match.title = "^(Open File|Select|Choose a wallpaper|Open Folder|Save As|Library|Choose Where to Download|File Operation Progress|Rename|Copy Files|Move Files|Search Files)$"
+match.title = [
+  "^Open File$",
+  "^Select$",
+  "^Choose a wallpaper$",
+  "^Open Folder$",
+  "^Save As$",
+  "^Library$",
+  "^Choose Where to Download$",
+  "^File Operation Progress$",
+  "^Rename$",
+  "^Copy Files$",
+  "^Move Files$",
+  "^Search Files$",
+]
 default_floating = true
 blur_optimized = false
 default_floating_size = { width = 0.8, height = 0.9 }
@@ -97,8 +139,8 @@ default_floating = true
 # default_position = { x = 0, y = 0 }
 
 [[window_rule]]
-match.app_id = "org\\.localsend\\.localsend_app"
-match.title = "LocalSend"
+match.app_id = "^org\\.localsend\\.localsend_app$"
+match.title = "^LocalSend$"
 default_floating = false
 # default_height = 1
 # default_width = 0.3333
@@ -115,21 +157,34 @@ default_floating_size = { width = 1 }
 default_position = { x = 20, y = 20, anchor = "bottom_right" }
 
 [[window_rule]]
-match.app_id = "^(org\\.gnome\\.Loupe|org\\.gnome\\.Totem|org\\.gnome\\.Photos)$"
+match.app_id = [
+  "^org\\.gnome\\.Loupe$",
+  "^org\\.gnome\\.Totem$",
+  "^org\\.gnome\\.Photos$",
+]
 default_floating = true
 default_floating_size = { width = 0.8, height = 0.9 }
 opacity = 1.0
 
 [[window_rule]]
-match.title = "(图片查看器|Image Viewer|图片和视频|Image and Video Viewer|视频播放器|Video Player|^Videos$)"
+match.title = [
+  "^(图片查看器)$",
+  "^(Image Viewer)$",
+  "^(图片和视频)$",
+  "^(Image and Video Viewer)$",
+  "^(视频播放器)$",
+  "^(Video Player)$",
+  "^Videos$",
+]
 default_floating = true
 default_floating_size = { width = 0.8, height = 0.9 }
 opacity = 1.0
 
 [[window_rule]]
-match.app_id = "thunar"
+match.app_id = "^thunar$"
 match.title = "^音频信息$"
 default_floating = true
+
 
 # ============================================================
 # 即时通讯 / 国产应用 (IM & local apps)
@@ -150,14 +205,13 @@ default_maximize = false
 default_floating_size = { width = 0.8, height = 0.9 }
 blur_optimized = false
 
-
 [[window_rule]]
 match.app_id = "^QQ$"
 match.title = "^QQ$"
 
 [[window_rule]]
 match.app_id = "^QQ$"
-match.title = "^(资料卡|天气)$"
+match.title = ["^(资料卡)$", "^(天气)$"]
 default_focused = false
 blur_optimized = false
 
@@ -192,6 +246,7 @@ default_floating = true
 default_floating_size_px = { width = 532, height = 925 }
 blur_optimized = false
 
+
 # ============================================================
 # Steam 专属 (Steam-specific)
 # ============================================================
@@ -204,7 +259,7 @@ blur_optimized = false
 
 [[window_rule]]
 match.app_id = "^steam$"
-match.title = "^(Friends List|好友列表)$"
+match.title = ["^(Friends List)$", "^(好友列表)$"]
 default_scrolling_extent = 0.20
 
 # ============================================================
