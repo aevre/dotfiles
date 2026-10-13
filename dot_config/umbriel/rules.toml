@@ -142,8 +142,7 @@ default_floating = true
 match.app_id = "^org\\.localsend\\.localsend_app$"
 match.title = "^LocalSend$"
 default_floating = false
-# default_height = 1
-# default_width = 0.3333
+default_floating_size = { width = 0.3, height = 1 }
 
 
 # ============================================================
