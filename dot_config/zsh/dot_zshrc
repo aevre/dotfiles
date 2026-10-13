@@ -1,19 +1,48 @@
-export ZDOTDIR="$HOME/.config/zsh"
+# shellcheck disable=SC1090,SC1091
+# =========================
+# XDG Directories
+# =========================
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
+# Zsh configuration directory
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+# Starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
-if [[ ! -d "$XDG_CACHE_HOME/zsh" ]]; then
-    mkdir -p "$XDG_CACHE_HOME/zsh"
+# =========================
+# Cache Directory
+# =========================
+if ! mkdir -p -- "$XDG_CACHE_HOME/zsh"; then
+  print -u2 -- "zsh: cannot create cache directory: $XDG_CACHE_HOME/zsh"
 fi
 
-# 加载配置
-for file in "$ZDOTDIR/conf.d/"*.zsh; do
-    source "$file"
-done
+# =========================
+# Load Configuration
+# =========================
 
-# 私有配置
-[[ -f "$ZDOTDIR/local.zsh" ]] && \
-source "$ZDOTDIR/local.zsh"
+# Load conf.d/*.zsh in lexical order
+if [[ -d "$ZDOTDIR/conf.d" ]]; then
+  for file in "$ZDOTDIR/conf.d/"*.zsh; do
+    # Skip unmatched globs
+    [[ -f "$file" ]] || continue
+
+    if [[ -r "$file" ]]; then
+      source "$file" ||
+        print -u2 -- "zsh: failed to load: ${file##*/}"
+    else
+      print -u2 -- "zsh: unreadable config: ${file##*/}"
+    fi
+  done
+fi
+
+# =========================
+# Local Configuration
+# =========================
+if [[ -r "$ZDOTDIR/local.zsh" ]]; then
+  source "$ZDOTDIR/local.zsh" ||
+    print -u2 -- "zsh: failed to load: local.zsh"
+fi
+
+unset file

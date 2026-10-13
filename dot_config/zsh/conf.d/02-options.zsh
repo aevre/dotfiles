@@ -1,25 +1,23 @@
+# =========================
+# Options
+# =========================
 setopt AUTO_CD
 setopt INTERACTIVE_COMMENTS
 
 # =========================
 # History
 # =========================
-HISTFILE="$HOME/.local/state/zsh/history"
+# XDG state directory
+: ${XDG_STATE_HOME:="$HOME/.local/state"}
+HISTFILE="$XDG_STATE_HOME/zsh/history"
 
 HISTSIZE=100000
 SAVEHIST=100000
 
-# 追加写入，不覆盖
-setopt APPEND_HISTORY
-
-# 命令执行后立即写历史
-setopt INC_APPEND_HISTORY
-
-# 多终端共享历史
+# 多终端共享历史（同时负责追加和同步）
 setopt SHARE_HISTORY
 
 # 去重
-setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 
@@ -29,23 +27,34 @@ setopt HIST_REDUCE_BLANKS
 # 保存时间戳
 setopt EXTENDED_HISTORY
 
-mkdir -p "$(dirname "$HISTFILE")"
+# 避免历史记录目录不存在
+if ! mkdir -p -- "${HISTFILE:h}"; then
+  print -u2 -- "zsh: cannot create history directory: ${HISTFILE:h}"
+fi
 
 # =========================
 # Completion
 # =========================
+: ${XDG_CACHE_HOME:="$HOME/.cache"}
+
+ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump"
+ZSH_COMPCACHE="$ZSH_CACHE_DIR/zcompcache"
+
+# 提前创建缓存目录
+if ! mkdir -p -- "$ZSH_CACHE_DIR" "$ZSH_COMPCACHE"; then
+  print -u2 -- "zsh: cannot create completion cache directory"
+fi
+
+# 初始化补全系统
 autoload -Uz compinit
-
-# 补全缓存
-zcompdump="$XDG_CACHE_HOME/zsh/.zcompdump"
-
-compinit -d "$zcompdump"
+compinit -d "$ZSH_COMPDUMP"
 
 # 大小写不敏感
 # down -> Downloads
 zstyle ':completion:*' matcher-list \
-    'm:{a-z}={A-Za-z}' \
-    'r:|[._-]=* r:|=*'
+  'm:{a-z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*'
 
 # 补全菜单
 zstyle ':completion:*' menu select
@@ -53,24 +62,27 @@ zstyle ':completion:*' menu select
 # 彩色补全
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-# 补全缓存目录
-zstyle ':completion:*' cache-path "$HOME/.cache/zsh/zcompcache"
-
-mkdir -p "$HOME/.cache/zsh"
-
+# 补全缓存
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path "$ZSH_COMPCACHE"
 
 # =========================
-# 补全增强
+# Completion Enhancement
 # =========================
 
-# 隐藏末尾 /
+# 参数补全时，目录名使用末尾 /
 setopt AUTO_PARAM_SLASH
 
-# 输入目录名后自动补 /
+# 补全选项时自动显示候选项
 setopt AUTO_LIST
 
-# 更智能 cd 补全
-zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories files
+# cd 专用补全
+zstyle ':completion:*:*:cd:*' tag-order \
+  local-directories directory-stack path-directories files
 
+# 菜单补全反向选择
 zmodload zsh/complist
 bindkey -M menuselect '^[[Z' reverse-menu-complete
+
+# 清理临时变量
+unset ZSH_CACHE_DIR ZSH_COMPDUMP ZSH_COMPCACHE
