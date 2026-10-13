@@ -7,6 +7,7 @@ if [[ -o interactive ]]; then
   autoload -Uz up-line-or-beginning-search
   autoload -Uz down-line-or-beginning-search
 
+  # Use distinct widget names; reusing the function name makes zle/zvm wrap itself.
   zle -N up-line-or-beginning-search
   zle -N down-line-or-beginning-search
 

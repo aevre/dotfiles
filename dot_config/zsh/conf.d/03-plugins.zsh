@@ -3,7 +3,6 @@
 typeset -a zsh_plugins=(
   "/usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh|paru -S zsh-vi-mode"
   "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh|sudo pacman -S zsh-autosuggestions"
-  "/usr/share/zsh/plugins/zsh-hist/zsh-hist.plugin.zsh|paru -S zsh-hist-git"
 )
 
 for entry in "${zsh_plugins[@]}"; do
