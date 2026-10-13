@@ -35,3 +35,4 @@ text/x-python3=nvim.desktop;
 text/plain=nvim.desktop;
 image/png=swayimg.desktop;
 image/jpeg=swayimg.desktop;
+text/markdown=nvim.desktop;
