@@ -2,7 +2,7 @@
   "npmCommand": [
     "pnpm"
   ],
-  "lastChangelogVersion": "1.0.4",
+  "lastChangelogVersion": "1.2.0",
   "theme": "noctalia",
   "defaultProvider": "opencode",
   "defaultModel": "nemotron-3.5-lightning-free",
