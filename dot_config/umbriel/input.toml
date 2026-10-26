@@ -14,7 +14,7 @@ track_layout = "global"
 
 [input.touchpad]
 tap = true # enabled by default; false disables tap-to-click
-# natural_scroll = true
+natural_scroll = true
 
 [input.mouse]
 # natural_scroll = false
