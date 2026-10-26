@@ -16,7 +16,7 @@ output_path = "$XDG_DATA_HOME/fcitx5/themes/veyra/panel.svg"
 index = 2
 input_path = "$XDG_DATA_HOME/fcitx5/themes/veyra/highlight_template.svg"
 output_path = "$XDG_DATA_HOME/fcitx5/themes/veyra/highlight.svg"
-post_hook = "if pgrep -x fcitx5 >/dev/null 2>&1; then pkill -x fcitx5; sleep 1; fcitx5 -d >/dev/null 2>&1 & fi"
+post_hook = "busctl --user call org.fcitx.Fcitx5 /controller org.fcitx.Fcitx.Controller1 ReloadAddonConfig s classicui"
 
 [theme.templates.user.nvim]
 input_path = "$XDG_CONFIG_HOME/noctalia/templates/nvim/color"
