@@ -24,13 +24,11 @@ blur_optimized = false
 match.app_id = "^dev\\.noctalia\\.Noctalia$"
 default_floating = true
 default_floating_size = { width = 0.8, height = 0.9 }
-blur_optimized = false
 blur_popups = false
 
 [[window_rule]]
 match.app_id = "^dev\\.noctalia\\.UmbrielSharePicker$"
 default_floating = true
-blur_optimized = false
 default_floating_size = { width = 0.8, height = 0.9 }
 
 [[window_rule]]
@@ -188,6 +186,62 @@ match.app_id = "^thunar$"
 match.title = "^音频信息$"
 default_floating = true
 
+
+[[window_rule]]
+match.app_id = [
+  "^(firefox.*|org\\.mozilla\\.firefox)$",
+  "^(google-chrome.*|chrome|chromium.*|com\\.google\\.Chrome|org\\.chromium\\.Chromium)$",
+  "^(brave.*|com\\.brave\\.Browser|microsoft-edge.*|edge|com\\.microsoft\\.Edge)$",
+  "^(zen.*|app\\.zen_browser\\.zen)$",
+  "^(vivaldi.*|opera.*|thorium.*|floorp.*|waterfox.*|librewolf.*)$",
+  "^(org\\.gnome\\.Epiphany.*|epiphany|falkon.*|nyxt.*|qutebrowser.*|ladybird.*|midori.*|tor-browser.*)$",
+]
+vrr = "fullscreen"
+
+
+[[window_rule]]
+match.app_id = [
+  "^steam_app_.*$",
+  "^(gamescope|com\\.valvesoftware\\.Steam\\.Utility\\.gamescope)$",
+  "^org\\.(duckstation\\.DuckStation|ppsspp\\.PPSSPP|libretro\\.RetroArch|DolphinEmu\\.dolphin-emu|citra_emu\\.citra|azahar_emu\\.Azahar|desmume\\.DeSmuME|wesnoth\\.Wesnoth)$",
+  "^net\\.(pcsx2\\.PCSX2|rpcs3\\.RPCS3|shadps4\\.shadPS4|kuribo64\\.melonDS|veloren\\.veloren)$",
+  "^io\\.(mgba\\.mGBA|openrct2\\.OpenRCT2|anuke\\.Mindustry)$",
+  "^io\\.github\\.(simple64\\.simple64|lime3ds\\.Lime3DS|ryubing\\.Ryujinx|streetpea\\.Chiaki4deck)$",
+  "^(info\\.cemu\\.Cemu|app\\.xemu\\.xemu|com\\.fightcade\\.Fightcade2|com\\.mamedev\\.MAME|com\\.wildfiregames\\.0ad|dev\\.goats\\.xivlauncher|com\\.github\\.Anuken\\.Mindustry|org\\.openmw\\.OpenMW|org\\.openttd\\.OpenTTD|org\\.cataclysmdda\\.CataclysmDDA)$",
+  "^(duckstation-(qt|nogui)|pcsx2(-qt)?|rpcs3|shadps4|PPSSPP(Qt|SDL)|Vita3K|Ryujinx|suyu|sudachi|torzu|yuzu|cemu|dolphin-emu|lime3ds|citra(-qt)?|melonDS|mgba(-qt)?|simple64-gui|RMG|xemu|retroarch|mame|ggpofba|fbneo|snes9x)$",
+  "^(cs2|dota2|wine)$",
+  "^(com\\.moonlight_stream\\.Moonlight|moonlight|chiaki|chiaki-ng|com\\.parsecgaming\\.parsec|parsecd)$",
+]
+vrr = "fullscreen"
+opacity = 1.0
+blur = false
+border_width = 0
+shadow = false
+
+
+[[window_rule]]
+match.app_id = [
+  "^((genshinimpact|yuanshen|starrail|zenlesszonezero|client-win64-shipping|wuthering waves|endfield|ffxiv_dx11|ffxiv|wow|wowclassic|league of legends|pathofexile|pathofexile_x64|pathofexile2|warframe\\.x64|r5apex|overwatch|marvelrivals|deadlock|project8)\\.exe)$",
+  "^(net-minecraft-client-main-Main|Minecraft.*|factorio|RimWorldLinux|Terraria\\.bin\\.x86_64|StardewValley\\.bin\\.x86_64|Hollow_Knight\\.x86_64|deadcells|Celeste|victoria3|hoi4|ck3|stellaris|eu4|openmw|openra-(ra|cnc|d2k)|openrct2|openttd|spring|Beyond-All-Reason|mindustry|pyrogenesis|veloren-voxygen|cataclysm-tiles|wesnoth)$",
+  "^((RimWorldWin64|Balatro|noita|noita_dev|Hades|Hades2|xenia|xenia_canary|Cemu)\\.exe)$",
+]
+vrr = "fullscreen"
+opacity = 1.0
+blur = false
+border_width = 0
+shadow = false
+
+[[window_rule]]
+match.title = [
+  "^Minecraft [0-9]+\\.[0-9]+(\\.[0-9]+)?.*$",
+  "^Steam Big Picture Mode$",
+  "(genshin impact|Genshin Impact|zenless zone zero|Zenless Zone Zero|honkai: star rail|Honkai: Star Rail|wuthering waves|Wuthering Waves|minecraft|Minecraft|victoria 3|Victoria 3|endfield|Endfield)",
+]
+vrr = "fullscreen"
+opacity = 1.0
+blur = false
+border_width = 0
+shadow = false
 
 # ============================================================
 # 即时通讯 / 国产应用 (IM & local apps)
