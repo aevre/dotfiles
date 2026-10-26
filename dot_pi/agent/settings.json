@@ -2,10 +2,10 @@
   "npmCommand": [
     "pnpm"
   ],
-  "lastChangelogVersion": "1.2.0",
+  "lastChangelogVersion": "1.4.0",
   "theme": "noctalia",
-  "defaultProvider": "opencode",
-  "defaultModel": "nemotron-3.5-lightning-free",
+  "defaultProvider": "passion",
+  "defaultModel": "gpt-5.6-sol",
   "quietStartup": true,
   "defaultThinkingLevel": "medium",
   "packages": [
@@ -17,6 +17,8 @@
     "npm:@narumitw/pi-plan-mode",
     "npm:@tintinweb/pi-subagents",
     "npm:@tintinweb/pi-tasks",
-    "git:github.com/DietrichGebert/ponytail"
-  ]
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:@narumitw/pi-tui-kit"
+  ],
+  "hideThinkingBlock": true
 }
