@@ -20,5 +20,5 @@
     "git:github.com/DietrichGebert/ponytail",
     "npm:@narumitw/pi-tui-kit"
   ],
-  "hideThinkingBlock": true
+  "hideThinkingBlock": false
 }
