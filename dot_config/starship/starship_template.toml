@@ -3,7 +3,7 @@ add_newline = true
 command_timeout = 1500
 
 format = """\
-[┏━](blue)\
+[┏━](primary)\
 $os\
 $username\
 [ ](subtext0)\
@@ -16,7 +16,7 @@ $memory_usage\
 $battery\
 $cmd_duration\
 $status
-[┣━](blue)\
+[┣━](primary)\
 $directory\
 $git_branch\
 $git_status\
@@ -30,7 +30,7 @@ $kotlin\
 $rust\
 $docker_context\
 $kubernetes
-[┗━►](blue) \
+[┗━►](primary) \
 """
 
 right_format = "$jobs"
@@ -82,18 +82,18 @@ style = "overlay2"
 
 [username]
 show_always = true
-style_user = "bold blue"
+style_user = "bold primary"
 style_root = "red"
 format = "[$user]($style)"
 
 [hostname]
 ssh_only = false
-style = "bold blue"
+style = "bold primary"
 format = "[ $hostname]($style)"
 
 [os]
 disabled = false
-format = "[$symbol](blue)"
+format = "[$symbol](primary)"
 
 [os.symbols]
 Arch = " "
@@ -127,7 +127,7 @@ fish_style_pwd_dir_length = 2
 read_only = " 󰌾"
 home_symbol = "~"
 format = '[\[ $path\]]($style)[$read_only]($read_only_style)'
-style = "bold blue"
+style = "bold primary"
 read_only_style = "red"
 
 # =========================
@@ -238,39 +238,40 @@ style = "yellow"
 
 [palettes.noctalia]
 # Standard colors
-blue      = "{{colors.terminal_normal_blue.default.hex}}"
-red       = "{{colors.terminal_normal_red.default.hex}}"
-green     = "{{colors.terminal_normal_green.default.hex}}"
-yellow    = "{{colors.terminal_normal_yellow.default.hex}}"
-cyan      = "{{colors.terminal_normal_cyan.default.hex}}"
-magenta   = "{{colors.terminal_normal_magenta.default.hex}}"
-white     = "{{colors.terminal_normal_white.default.hex}}"
-black     = "{{colors.terminal_normal_black.default.hex}}"
+primary = "{{colors.primary.default.hex}}"
+blue = "{{colors.terminal_normal_blue.default.hex}}"
+red = "{{colors.terminal_normal_red.default.hex}}"
+green = "{{colors.terminal_normal_green.default.hex}}"
+yellow = "{{colors.terminal_normal_yellow.default.hex}}"
+cyan = "{{colors.terminal_normal_cyan.default.hex}}"
+magenta = "{{colors.terminal_normal_magenta.default.hex}}"
+white = "{{colors.terminal_normal_white.default.hex}}"
+black = "{{colors.terminal_normal_black.default.hex}}"
 
 # Extended palette (Catppuccin-compatible names)
 rosewater = "{{colors.terminal_bright_yellow.default.hex}}"
-flamingo  = "{{colors.terminal_bright_red.default.hex}}"
-pink      = "{{colors.terminal_bright_magenta.default.hex}}"
-mauve     = "{{colors.terminal_normal_magenta.default.hex}}"
-maroon    = "{{colors.terminal_bright_red.default.hex}}"
-peach     = "{{colors.terminal_bright_yellow.default.hex}}"
-teal      = "{{colors.terminal_normal_cyan.default.hex}}"
-sky       = "{{colors.terminal_bright_cyan.default.hex}}"
-sapphire  = "{{colors.terminal_bright_blue.default.hex}}"
-lavender  = "{{colors.terminal_bright_magenta.default.hex}}"
+flamingo = "{{colors.terminal_bright_red.default.hex}}"
+pink = "{{colors.terminal_bright_magenta.default.hex}}"
+mauve = "{{colors.terminal_normal_magenta.default.hex}}"
+maroon = "{{colors.terminal_bright_red.default.hex}}"
+peach = "{{colors.terminal_bright_yellow.default.hex}}"
+teal = "{{colors.terminal_normal_cyan.default.hex}}"
+sky = "{{colors.terminal_bright_cyan.default.hex}}"
+sapphire = "{{colors.terminal_bright_blue.default.hex}}"
+lavender = "{{colors.terminal_bright_magenta.default.hex}}"
 
 # Text shades
-text      = "{{colors.terminal_foreground.default.hex}}"
-subtext1  = "{{colors.terminal_normal_white.default.hex}}"
-subtext0  = "{{colors.terminal_bright_black.default.hex}}"
+text = "{{colors.terminal_foreground.default.hex}}"
+subtext1 = "{{colors.terminal_normal_white.default.hex}}"
+subtext0 = "{{colors.terminal_bright_black.default.hex}}"
 
 # Surface shades
-overlay2  = "{{colors.terminal_bright_black.default.hex}}"
-overlay1  = "{{colors.terminal_bright_black.default.hex}}"
-overlay0  = "{{colors.terminal_normal_black.default.hex}}"
-surface2  = "{{colors.terminal_normal_black.default.hex}}"
-surface1  = "{{colors.terminal_normal_black.default.hex}}"
-surface0  = "{{colors.terminal_background.default.hex}}"
-base      = "{{colors.terminal_background.default.hex}}"
-mantle    = "{{colors.terminal_background.default.hex}}"
-crust     = "{{colors.terminal_background.default.hex}}"
+overlay2 = "{{colors.terminal_bright_black.default.hex}}"
+overlay1 = "{{colors.terminal_bright_black.default.hex}}"
+overlay0 = "{{colors.terminal_normal_black.default.hex}}"
+surface2 = "{{colors.terminal_normal_black.default.hex}}"
+surface1 = "{{colors.terminal_normal_black.default.hex}}"
+surface0 = "{{colors.terminal_background.default.hex}}"
+base = "{{colors.terminal_background.default.hex}}"
+mantle = "{{colors.terminal_background.default.hex}}"
+crust = "{{colors.terminal_background.default.hex}}"
