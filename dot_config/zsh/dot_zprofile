@@ -1,0 +1,5 @@
+source "$ZDOTDIR/conf.d/01-environment.zsh"
+
+if (($+commands[mise])); then
+  eval "$(mise env -s zsh)"
+fi
