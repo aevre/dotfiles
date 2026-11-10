@@ -48,6 +48,14 @@ match.app_id = [
 blur = true
 
 [[window_rule]]
+match.app_id = [
+  "^com\\.mitchellh\\.ghostty$",
+  "^neovide$",
+]
+default_scrolling_extent = 1
+# default_maximize = true
+
+[[window_rule]]
 match.app_id = ["^obsidian$", "^org\\.gnome\\.Nautilus$"]
 opacity = 0.9
 

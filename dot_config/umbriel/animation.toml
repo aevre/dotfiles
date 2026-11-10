@@ -1,55 +1,62 @@
 [animation]
 enabled = true
-duration_ms = 350
+duration_ms = 250
 curve = "easeout"
 
 [animation.windows_in]
 enabled = true
 duration_ms = 350
-curve = "easeout"
+curve = "0.05,0.9,0.1,1"
 effect = "radial-reveal"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 350
-curve = "easeout"
+duration_ms = 300
+curve = "0.05,0.9,0.1,1"
 effect = "radial-reveal"
 
 [animation.windows_move]
 enabled = true
-duration_ms = 400
-curve = "snappy"
+curve = "spring:1,600"
 effect = "squash"
+
+[animation.windows_resize]
+enabled = true
+curve = "spring:1,1000"
+
+[animation.windows_opacity]
+enabled = true
+curve = "spring:1,1000"
 
 [animation.workspaces]
 enabled = true
-duration_ms = 400
-curve = "0.15,1.2,0.25,1"
+style = "slide"
+curve = "spring:0.78,700"
 
 [animation.overview]
 enabled = true
-duration_ms = 300
-curve = "0.2,1.08,0.3,1"
+curve = "spring:1,800"
+workspace_curve = "spring:0.78,700"
 
 [animation.scratchpad]
 enabled = true
-duration_ms = 350
-curve = "0.16,1,0.3,1"
-dim = 0.6
+curve = "spring:1,900"
+dim = 0.5
 blur = true
+
+[animation.dialogs]
+enabled = true
+dim = 0.3
 
 [animation.border]
 enabled = true
-duration_ms = 350
-curve = "0.2,0.8,0.3,1"
+curve = "spring:1,1000"
 
 [animation.dim_unfocused]
 enabled = true
-duration_ms = 350
-curve = "0.2,0.8,0.3,1"
-dim = 0.2
+curve = "spring:1,1000"
+dim = 0.15
 
 [animation.layers]
 enabled = true
-duration_ms = 250
-curve = "0.16,1,0.3,1"
+curve = "spring:1,1000"
