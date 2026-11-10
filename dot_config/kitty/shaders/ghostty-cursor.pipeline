@@ -1,0 +1,7 @@
+startgroup
+ animation_start cursor-trail-move
+ animation_stop cursor-trail-stop
+ var bool CONNECTED true
+ var int MOTION_BLUR_SAMPLES 32
+ shaders cursor-trail-motion-blur
+endgroup
