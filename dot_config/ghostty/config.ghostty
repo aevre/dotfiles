@@ -1,0 +1,68 @@
+theme = noctalia
+
+font-family = "Maple Mono NF CN"
+font-size = 14
+alpha-blending = linear-corrected
+adjust-cursor-thickness = 1
+background-opacity = 0.85
+background-blur = 30
+selection-clear-on-copy = true
+minimum-contrast = 1
+mouse-hide-while-typing = true
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+custom-shader = shaders/ghostty-cursor-trails/boo-cursor.glsl
+custom-shader-animation = true
+
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 5m
+confirm-close-surface = false
+
+# ==========================================
+# Keybindings
+# ==========================================
+
+# ------------------------------------------
+# Split Management
+# ------------------------------------------
+
+# Create splits
+keybind = ctrl+shift+o=new_split:right
+keybind = ctrl+shift+e=new_split:down
+
+# Navigate splits (Vim-style)
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+j=goto_split:down
+keybind = ctrl+alt+k=goto_split:up
+keybind = ctrl+alt+l=goto_split:right
+
+# Resize splits (50px, Vim-style)
+keybind = ctrl+alt+shift+h=resize_split:left,50
+keybind = ctrl+alt+shift+j=resize_split:down,50
+keybind = ctrl+alt+shift+k=resize_split:up,50
+keybind = ctrl+alt+shift+l=resize_split:right,50
+
+# Split layout
+keybind = ctrl+shift+enter=toggle_split_zoom
+keybind = ctrl+alt+0=equalize_splits
+
+# ------------------------------------------
+# Tab Management
+# ------------------------------------------
+
+keybind = ctrl+shift+t=new_tab
+# Create / close tabs
+keybind = ctrl+shift+w=close_surface
+
+# Navigate tabs
+keybind = ctrl+shift+tab=previous_tab
+keybind = ctrl+tab=next_tab
+
+# ------------------------------------------
+# Window Management
+# ------------------------------------------
+
+# Create a new window
+keybind = ctrl+shift+n=new_window
