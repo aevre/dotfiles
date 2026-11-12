@@ -1,0 +1,8 @@
+# shellcheck shell=bash
+# Bash keeps this fixed entry point; the real configuration lives under XDG_CONFIG_HOME.
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+if [[ -r "$XDG_CONFIG_HOME/bash/bashrc" ]]; then
+  # shellcheck source=/dev/null
+  source "$XDG_CONFIG_HOME/bash/bashrc"
+fi

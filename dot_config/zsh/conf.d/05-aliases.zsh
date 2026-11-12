@@ -32,14 +32,3 @@ alias gl='git log --oneline --graph --decorate'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'
-
-# =========================
-# Functions
-# =========================
-
-# Neovide: fork into background
-if (($+commands[neovide])); then
-  neovide() {
-    command neovide --fork "$@"
-  }
-fi

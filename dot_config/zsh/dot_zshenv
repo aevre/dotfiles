@@ -1,1 +1,2 @@
-[[ -r "$ZDOTDIR/secrets.zsh" ]] && source "$ZDOTDIR/secrets.zsh"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+[[ -r "$XDG_CONFIG_HOME/shell/secrets.sh" ]] && source "$XDG_CONFIG_HOME/shell/secrets.sh"

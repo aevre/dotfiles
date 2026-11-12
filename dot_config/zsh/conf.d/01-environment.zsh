@@ -30,6 +30,11 @@ export GOPATH="$HOME/go"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
 # =========================
+# Neovide
+# =========================
+export NEOVIDE_FORK=1
+
+# =========================
 # PATH
 # =========================
 typeset -U path

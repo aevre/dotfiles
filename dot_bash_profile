@@ -1,0 +1,11 @@
+# shellcheck shell=bash
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+# Login-shell environment, equivalent to Zsh's .zprofile.
+if [[ -r "$XDG_CONFIG_HOME/bash/conf.d/01-environment.bash" ]]; then
+  # shellcheck source=/dev/null
+  source "$XDG_CONFIG_HOME/bash/conf.d/01-environment.bash"
+fi
+
+# shellcheck source=/dev/null
+[[ -r "$HOME/.bashrc" ]] && source "$HOME/.bashrc"

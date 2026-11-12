@@ -1,0 +1,26 @@
+# shellcheck shell=bash
+# Do not configure non-interactive shells.
+[[ $- == *i* ]] || return
+
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export BASH_CONFIG_HOME="$XDG_CONFIG_HOME/bash"
+
+for file in "$BASH_CONFIG_HOME"/conf.d/*.bash; do
+  [[ -f "$file" ]] || continue
+
+  if [[ -r "$file" ]]; then
+    # shellcheck source=/dev/null
+    source "$file" || printf 'bash: failed to load: %s\n' "${file##*/}" >&2
+  else
+    printf 'bash: unreadable config: %s\n' "${file##*/}" >&2
+  fi
+done
+
+if [[ -r "$BASH_CONFIG_HOME/local.bash" ]]; then
+  # shellcheck source=/dev/null
+  source "$BASH_CONFIG_HOME/local.bash" ||
+    printf 'bash: failed to load: local.bash\n' >&2
+fi
+
+unset file
