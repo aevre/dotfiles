@@ -2,7 +2,7 @@
   "npmCommand": [
     "pnpm"
   ],
-  "lastChangelogVersion": "1.5.1",
+  "lastChangelogVersion": "1.5.2",
   "theme": "noctalia",
   "defaultProvider": "passion",
   "defaultModel": "gpt-5.6-sol",
