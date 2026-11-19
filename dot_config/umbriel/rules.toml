@@ -35,6 +35,10 @@ default_floating_size = { width = 0.8, height = 0.9 }
 match.app_id = "^zen$"
 blur_popups = false
 
+[[window_rule]]
+match.app_id = "^dev\\.noctalia\\.luciole$"
+blur_popups = false
+
 # ============================================================
 # 模糊 / 透明 (Blur & opacity)
 # ============================================================
