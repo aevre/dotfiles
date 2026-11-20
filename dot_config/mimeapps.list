@@ -36,3 +36,4 @@ text/plain=nvim.desktop;
 image/png=swayimg.desktop;
 image/jpeg=swayimg.desktop;
 text/markdown=nvim.desktop;
+image/svg+xml=nvim.desktop;
