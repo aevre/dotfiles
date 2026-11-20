@@ -2,7 +2,7 @@
 
 # ===== 应用启动 / 面板 =====
 "Mod+T" = "spawn kitty"
-"Mod+E" = "spawn thunar"
+"Mod+E" = "spawn luciole"
 "Mod+W" = "spawn noctalia msg panel-toggle wallpaper"
 "Mod+Shift+W" = "spawn noctalia msg panel-toggle tadomika_ari/w-engine:w-engine-panel"
 "Mod+Shift+C" = "spawn noctalia msg panel-toggle yuuto/calculator:panel"
