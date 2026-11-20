@@ -2,7 +2,7 @@
   "npmCommand": [
     "pnpm"
   ],
-  "lastChangelogVersion": "1.5.2",
+  "lastChangelogVersion": "1.6.0",
   "theme": "noctalia",
   "defaultProvider": "passion",
   "defaultModel": "gpt-5.6-sol",
@@ -23,8 +23,10 @@
   "hideThinkingBlock": false,
   "extensionChangelogVersions": {
     "{\"source\":\"npm:pi-powerline-footer\",\"scope\":\"user\"}": "0.22.0",
-    "{\"source\":\"npm:@tintinweb/pi-subagents\",\"scope\":\"user\"}": "0.23.1",
+    "{\"source\":\"npm:@tintinweb/pi-subagents\",\"scope\":\"user\"}": "0.26.1",
     "{\"source\":\"npm:@tintinweb/pi-tasks\",\"scope\":\"user\"}": "0.9.1",
-    "{\"source\":\"npm:@narumitw/pi-plan-mode\",\"scope\":\"user\"}": "0.59.6"
+    "{\"source\":\"npm:@narumitw/pi-plan-mode\",\"scope\":\"user\"}": "0.60.3",
+    "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6",
+    "{\"source\":\"npm:@mrclrchtr/supi-claude-md\",\"scope\":\"user\"}": "12.0.0"
   }
 }
