@@ -5,7 +5,7 @@
   "lastChangelogVersion": "1.6.0",
   "theme": "noctalia",
   "defaultProvider": "passion",
-  "defaultModel": "gpt-5.6-sol",
+  "defaultModel": "gpt-6-sol",
   "quietStartup": true,
   "defaultThinkingLevel": "medium",
   "packages": [
@@ -18,7 +18,8 @@
     "npm:@tintinweb/pi-subagents",
     "npm:@tintinweb/pi-tasks",
     "git:github.com/DietrichGebert/ponytail",
-    "npm:@narumitw/pi-tui-kit"
+    "npm:@narumitw/pi-tui-kit",
+    "npm:pi-tidy"
   ],
   "hideThinkingBlock": false,
   "extensionChangelogVersions": {
@@ -27,6 +28,7 @@
     "{\"source\":\"npm:@tintinweb/pi-tasks\",\"scope\":\"user\"}": "0.9.1",
     "{\"source\":\"npm:@narumitw/pi-plan-mode\",\"scope\":\"user\"}": "0.60.3",
     "{\"source\":\"npm:pi-cache-optimizer\",\"scope\":\"user\"}": "2.10.6",
-    "{\"source\":\"npm:@mrclrchtr/supi-claude-md\",\"scope\":\"user\"}": "12.0.0"
+    "{\"source\":\"npm:@mrclrchtr/supi-claude-md\",\"scope\":\"user\"}": "12.0.0",
+    "{\"source\":\"npm:pi-tidy\",\"scope\":\"user\"}": "0.10.0"
   }
 }
